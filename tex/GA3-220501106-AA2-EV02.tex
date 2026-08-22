@@ -1,0 +1,120 @@
+\input{preambulo}
+
+% Cuerpo del documento
+\begin{document}
+	\input{portada}
+	
+	\newpage
+	\setstretch{1.15}
+	\tableofcontents
+	\newpage
+	\doublespacing
+	
+	% --- INTRODUCCIÓN ---
+	\section{Introducción y Contexto Tecnológico}
+		En el sector de la transformación industrial y fabricación de empaques flexibles de alta barrera, la tecnología de la información (TI) ha dejado de ser una simple herramienta de soporte administrativo para convertirse en el núcleo operativo que sostiene la productividad, la trazabilidad de insumos y el aseguramiento de la calidad. La empresa Plastilene S.A. opera bajo esquemas de alta exigencia donde cada segundo de inactividad o cada falla en la transmisión de datos se traduce en retrasos en la cadena de suministro, pérdida de materias primas o reprocesos en planta.
+		
+		El entorno informático de Plastilene S.A. integra diversos niveles de tecnología: desde el sistema centralizado de planificación de recursos empresariales SAP (utilizado para el control de inventarios, gestión de órdenes de producción y seguimiento de movimientos de material), hasta programas informáticos especializados de piso de planta que capturan en tiempo real los volúmenes procesados en la maquinaria de extrusión, impresión, laminado y conversión.
+		
+		Asimismo, el área de laboratorio de control de calidad requiere un nivel de precisión técnico elevado, apoyándose en la suite informática MainFTOS e instrumentación especializada (espectroscopia de barrera, medidores de espesor y sensores de condiciones ambientales de temperatura y humedad) para certificar que los empaques cumplen con las especificaciones técnicas exigidas por la industria alimentaria y farmacéutica.
+		
+		El presente informe técnico de evidencia (GA3-220501106-AA2-EV02) consolida una auditoría detallada sobre la infraestructura tecnológica física y lógica de la organización. A través de la aplicación de una bitácora técnica integral, se analizan los componentes de red, el estado de los servidores, el desempeño del parque de computadores de escritorio, la eficiencia de la vasta red de impresoras térmicas/industriales y la operatividad de los dispositivos de captura móvil (pistolas de código de barras y terminales digitadoras). Finalmente, se diagnostican las falencias asociadas a equipos antiguos o con desgaste mecánico, proponiendo un plan de mejora sostenible para optimizar la infraestructura de TI.
+		
+	\section{Descripción de la Empresa y Arquitectura Tecnológica}
+		Plastilene S.A. es una organización consolidada en la manufactura de plásticos y empaques de alto desempeño. Su capacidad instalada abarca múltiples líneas de producción continua, donde la digitalización del piso de planta resulta indispensable para mantener la eficiencia global de los equipos (OEE).
+		
+		\subsection{Componentes de la Infraestructura de Hardware y Red}
+		\begin{itemize}
+			\item \textbf{Red Local (LAN) y Cobertura Wi-Fi Industrial:} La empresa cuenta con un cableado estructurado en categoría 6A/7 para áreas administrativas y de laboratorio, interconectado mediante switches administrables de capa 3 con redundancia de fibra óptica entre gabinetes principales. En la planta de producción, se dispone de una red inalámbrica Wi-Fi de grado industrial con Access Points distribuidos para garantizar la cobertura en zonas de tránsito de montacargas y almacenamiento de material.
+			\item \textbf{Parque Informático (Computadores de Escritorio y Portátiles):} Dispone de aproximadamente 80 a 100 estaciones de trabajo repartidas entre las oficinas administrativas, puestos de control en planta de producción, áreas de logística y el laboratorio de calidad. La composición del parque informático comprende equipos de reciente incorporación junto a estaciones antiguas con procesadores anteriores que requieren evaluación.
+			\item \textbf{Red de Impresoras Industriales y Térmicas:} Extensa infraestructura de impresión que abarca impresoras multifuncionales corporativas en áreas administrativas, así como una red distribuida de impresoras térmicas de alta velocidad (etiquetado de rollos, empaques y estibas) ubicadas directamente en las salidas de producción para el marcaje con código de barras de trazabilidad.
+			\item \textbf{Dispositivos de Captura y Captura Móvil (Pistolas y Digitadoras):} Conjunto de escáneres/pistolas inalámbricas de códigos de barras (2D/1D) y terminales digitadoras de uso pesado en piso, utilizadas por los operarios para registrar el consumo de materia prima, la entrada de resinas y la salida de producto terminado hacia el sistema central.
+		\end{itemize}
+		
+		\subsection{Arquitectura de Software, Ecosistema Digital y Seguridad}
+		\begin{itemize}
+			\item \textbf{Sistema ERP Central (SAP):} Es la columna vertebral de la organización. Controla los procesos financieros, compras, inventario de resinas y polímeros, movimientos de material entre bodegas y planeación de las órdenes de fabricación.
+			\item \textbf{Programas de Control de Piso y Captura de Material:} Interfaces de software tipo MES/WMS conectadas directamente con el sistema SAP que permiten a los digitadores y operarios auditar el peso, tipo de película, sobrantes y desperdicios de material en cada turno productivo.
+			\item \textbf{Suite Especializada de Calidad (MainFTOS y Sensores):} Software instalado en las estaciones de trabajo del laboratorio de calidad para gestionar las pruebas de espectroscopia infrarroja por transformada de Fourier (FTIR), pruebas de sellabilidad, tracción y registro de variables de temperatura y humedad ambiental mediante sensores dedicados.
+			\item \textbf{Protección Antivirus y Seguridad Endpoint:} Consola de administración centralizada de antivirus corporativo que gestiona las políticas de protección en tiempo real, detección de amenazas, control de puertos USB y parches de seguridad para salvaguardar la información contra malware o ransomware.
+		\end{itemize}
+		
+	\section{Bitácora Completa de Auditoría e Inspección Técnica TI}
+		Se ejecutó una jornada de inspección técnica directa en las instalaciones de Plastilene S.A., evaluando los componentes críticos del sistema. A continuación se presenta la bitácora estructurada de hallazgos:
+		
+		\vspace{0.5cm}
+		\noindent
+		\begin{tabularx}{\textwidth}{|p{2.3cm}|p{2.8cm}|X|c|p{4cm}|}
+		\hline
+		\textbf{Fecha} & \textbf{Componente} & \textbf{Actividad Técnica} & \textbf{Estado} & \textbf{Hallazgo / Observación} \\ \hline
+		19/08/2026 & Red Cableada LAN & Medición de latencia, ancho de banda y pérdida. & Bueno & Excelente conectividad backbone. 1 Gbps a puestos administrativos. \\ \hline
+		19/08/2026 & Wi-Fi Industrial Planta & Pruebas de roaming e intensidad de señal. & Bueno & Buena cobertura general; APs en constante de mejora. \\ \hline
+		19/08/2026 & Sistema SAP / BD & Tiempos de respuesta en transacciones. & Bueno & Servicio con alta disponibilidad (99.8\%). Procesamiento óptimo. \\ \hline
+		19/08/2026 & Programas de Piso & Verificación comunicación con servidor. & Bueno & Programas responden correctamente a carga de datos del turno. \\ \hline
+		19/08/2026 & Equipos de Cómputo & Inspección de uso CPU, disco y RAM en piso. & Regular & $\sim$12 PCs antiguos presentan lentitud por obsolescencia y desgaste en HDD. \\ \hline
+		19/08/2026 & Estaciones MainFTOS & Verificación estabilidad software y sensores. & Bueno & Ejecuta curvas bien. Se requiere supervisar calibración sensores. \\ \hline
+		19/08/2026 & Consola Antivirus & Verificación de firmas de seguridad. & Bueno & Protección activa 95\%. Tres equipos con actualización pendiente. \\ \hline
+		19/08/2026 & Impresoras Térmicas & Prueba de impresión térmica en línea. & Bueno & Respuesta rápida. Dos cabezales requieren limpieza de residuos. \\ \hline
+		19/08/2026 & Pistolas/Digitadoras & Pruebas de lectura continua e ingreso manual. & Regular & Pistolas sufren descargas rápidas e intermitencia en bodega. \\ \hline
+		19/08/2026 & Backups & Verificación logs automatizados. & Bueno & Cumplimiento riguroso de copias en nube y redundancia local. \\ \hline
+		\end{tabularx}
+		\vspace{0.5cm}
+		
+	\section{Evaluación Profunda de la Infraestructura TI y Servicios}
+		El diagnóstico ejecutado demuestra que Plastilene S.A. posee una infraestructura de TI robusta y bien articulada, respaldada por inversiones continuas en conectividad y plataformas ERP líderes como SAP. No obstante, en un entorno de producción continua, los componentes secundarios o los equipos informáticos que han superado su ciclo de vida útil representan vulnerabilidades silenciosas que afectan la velocidad operacional.
+		
+		\subsection{Anotación de Fortalezas Operativas}
+		\begin{itemize}
+			\item \textbf{Estabilidad de Servicios Críticos:} Los sistemas centrales (SAP y programas de piso) operan con niveles óptimos de disponibilidad, garantizando que no existan interrupciones masivas en la facturación o en el despacho de mercancía.
+			\item \textbf{Especialización en Control de Calidad:} La infraestructura informática del laboratorio (software MainFTOS e instrumental) cuenta con el estándar necesario para asegurar la certificación técnica de los productos plásticos.
+			\item \textbf{Infraestructura de Red Avanzada:} El esquema de red física y la continua mejora en la cobertura de Access Points brindan un soporte sólido para el tráfico masivo de transacciones de inventario.
+		\end{itemize}
+		
+		\subsection{Hallazgos Críticos y Análisis de Impacto}
+		
+		\noindent\textbf{Hallazgo 1: Obsolescencia y degrado de velocidad en equipos informáticos antiguos}\\
+		\textbf{Descripción:} Se constató que aproximadamente 12 computadores de escritorio asignados a módulos de digitación en planta y soporte de empaque corresponden a modelos antiguos con procesadores de gama baja, 4 GB de memoria RAM y unidades de disco duro mecánico (HDD) con alto porcentaje de fragmentación y desgaste.\\
+		\textbf{Impacto Operativo:} Los operarios experimentan demoras de hasta 10-15 minutos al iniciar sesión, abrir los programas de piso o cargar consultas en el sistema SAP. Esto ralentiza el proceso de pesaje y liberación de rollos de plástico.\\
+		\textbf{Recomendación:} Implementar un plan inmediato de repotenciación parcial (migración a discos de estado sólido SSD de 480GB y aumento a 8GB/16GB de RAM) y programar la sustitución definitiva de estos equipos en el presupuesto de inversión TI del próximo trimestre.
+		
+		\vspace{0.3cm}
+		\noindent\textbf{Hallazgo 2: Desgaste físico y problemas de batería en periféricos de piso (Pistolas/Digitadoras)}\\
+		\textbf{Descripción:} Las pistolas lectoras de código de barras inalámbricas y terminales de digitación operacional en piso de planta sufren un desgaste acelerado debido a caídas accidentales, ambientes con polvo de resina y sobreuso continuo en tres turnos de trabajo. Se evidencian baterías fatigadas que pierden la carga en mitad de la jornada.\\
+		\textbf{Impacto Operativo:} Obliga a los digitadores a ingresar manualmente los códigos de lote de 18 dígitos en los programas de piso o SAP, aumentando la probabilidad de error humano en la trazabilidad de insumos y generando filas de espera en las estaciones de báscula.\\
+		\textbf{Recomendación:} Adquirir un lote de reemplazo de baterías de ion-litio de alta densidad, instalar bases de carga rápida en los puestos de trabajo y sustituir los escáneres más degradados por modelos de carcasa industrial gomatada de alta resistencia.
+		
+		\vspace{0.3cm}
+		\noindent\textbf{Hallazgo 3: Mantenimiento e integración de sensores de variables en Laboratorio}\\
+		\textbf{Descripción:} Si bien la suite MainFTOS opera sin contratiempos, las estaciones del laboratorio que recolectan lecturas automáticas de humedad relativa y temperatura ambiental para los ensayos de esfuerzo mecánico mostraron lecturas nulas o descalibraciones puntuales.\\
+		\textbf{Impacto Operativo:} Incerteza en la homologación de ensayos bajo normas ISO/ASTM si los parámetros ambientales no quedan registrados correctamente durante la prueba de barrera de las películas plásticas.\\
+		\textbf{Recomendación:} Establecer un protocolo de calibración y limpieza de sensores junto con el departamento de mantenimiento industrial con frecuencia trimestral.
+		
+	\section{Plan Básico de Mejora Tecnológica}
+		Con el fin de solucionar los hallazgos descritos, elevar la disponibilidad de los servicios informáticos y optimizar el rendimiento del personal operativo, se propone la siguiente matriz de plan de mejora:
+		
+		\vspace{0.5cm}
+		\noindent
+		\begin{tabularx}{\textwidth}{|p{3.5cm}|X|c|p{3.5cm}|}
+		\hline
+		\textbf{Hallazgo} & \textbf{Acción Correctiva / Plan de Mejora} & \textbf{Prioridad} & \textbf{Responsable y Plazo} \\ \hline
+		Computadores de piso lentos y antiguos & Instalación de unidades SSD, expansión de RAM y reemplazo gradual de equipos. & Alta & Coord. TI / 30 a 60 días \\ \hline
+		Pistolas lectoras y digitadoras de piso & Sustitución de baterías agotadas, mantenimiento preventivo y nuevos escáneres. & Alta & Soporte TI Planta / 15 a 30 días \\ \hline
+		Mantenimiento Impresoras Térmicas & Limpieza de cabezales térmicos, calibración de rodillos y reemplazo de kits. & Media & Soporte TI / Quincenal \\ \hline
+		Monitoreo Antivirus en equipos piso & Sincronización forzada en la consola central y automatización de alertas. & Alta & Seguridad Informática / Inmediato (8 días) \\ \hline
+		Calibración Sensores de Laboratorio & Revisión técnica de interfaces de comunicación entre sensores y MainFTOS. & Media & Lab. Calidad y TI / Trimestral \\ \hline
+		\end{tabularx}
+		\vspace{0.5cm}
+		
+	\section{Conclusiones y Recomendaciones Finales}
+		\begin{itemize}
+			\item \textbf{Diagnóstico Integral de TI:} La evaluación desarrollada mediante la bitácora técnica permitió certificar que Plastilene S.A. ostenta una sólida base tecnológica en su backbone de red, arquitectura de servidores y software empresarial (SAP y MainFTOS), asegurando la continuidad del negocio y el cumplimiento de estándares corporativos.
+			\item \textbf{Priorización del Mantenimiento Operativo:} A pesar de la fortaleza de la red central, los cuellos de botella identificados en los equipos informáticos antiguos y en los dispositivos de captura en piso (pistolas y digitadoras) demuestran que el rendimiento de la TI depende directamente del estado del hardware de cara al usuario final.
+			\item \textbf{Retorno de la Inversión en Mejora Tecnológica:} La ejecución del plan de mejora propuesto (renovación de discos SSD, cambio de baterías en periféricos y sincronización de seguridad) generará una reducción inmediata en los tiempos de espera de los operarios, garantizará una trazabilidad de inventarios sin errores y blindará el ecosistema digital de Plastilene S.A. ante eventuales fallas operativas.
+			\item \textbf{Cultura de Auditoría Continua:} Se recomienda institucionalizar la aplicación de esta bitácora de infraestructura TI de forma periódica (semestral), consolidando una cultura de mantenimiento preventivo y proactivo que acompañe el crecimiento industrial de la empresa.
+		\end{itemize}
+
+    \nocite{*} % Muestra todas las referencias del .bib
+	% Imprimir la bibliografía
+	\printbibliography[title={Referencias}]
+		
+\end{document}
